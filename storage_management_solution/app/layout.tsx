@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 
@@ -11,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Syncara",
-  description: "StoreIt - The only storage solution you need.",
+  description: "The only storage solution you need.",
 };
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} font-poppins antialiased`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
